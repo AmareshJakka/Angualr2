@@ -1,0 +1,31 @@
+<form [formGroup]='loginForm' ngSubmit="onSubmit()">
+  <div class="row">
+    <div class="col-sm-12">
+      <label>
+        FirstName:
+        <input type="text" formControlName="firstName">
+      </label>
+      <label>
+        Lastname:
+        <input type="text" formControlName="lastName">
+      </label>
+      <div formGroupName="address">
+        <label>
+          Line1:
+          <input type="text" formControlName="line1">
+        </label>
+        <label>
+          City:
+          <input type="text" formControlName="city">
+        </label>
+        <label>
+          State:
+          <input type="text" formControlName="state">
+        </label>
+
+      </div>
+      <button type="submit">Submit</button>
+
+    </div>
+  </div>
+</form>
